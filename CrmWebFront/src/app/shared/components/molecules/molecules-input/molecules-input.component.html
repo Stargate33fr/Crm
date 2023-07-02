@@ -1,0 +1,65 @@
+<div class="group">
+  <div class="textfield-outlined">
+    <input
+      #inputElement
+      nz-input
+      [id]="id"
+      type="text"
+      placeholder=" "
+      (keyup)="writeValue($event)"
+      [(ngModel)]="valeur"
+      (ngModelChange)="onChange($event)"
+      [style.width.px]="longueur"
+      [disabled]="disabled"
+      *ngIf="!autoComplete && !readonly"
+    />
+    <input
+      *ngIf="autoComplete && !readonly"
+      #inputElement
+      nz-input
+      [id]="id"
+      [nzAutocomplete]="autoComplete"
+      type="text"
+      placeholder=" "
+      (keyup)="writeValue($event)"
+      [(ngModel)]="valeur"
+      (ngModelChange)="onChange($event)"
+      [style.width.px]="longueur"
+      [disabled]="disabled"
+    />
+
+    <input
+      #inputElement
+      nz-input
+      [id]="id"
+      type="text"
+      placeholder=" "
+      (keyup)="writeValue($event)"
+      [(ngModel)]="valeur"
+      (ngModelChange)="onChange($event)"
+      [style.width.px]="longueur"
+      [disabled]="disabled"
+      *ngIf="!autoComplete && readonly"
+      readonly
+    />
+    <input
+      *ngIf="autoComplete && readonly"
+      #inputElement
+      nz-input
+      [id]="id"
+      [nzAutocomplete]="autoComplete"
+      type="text"
+      placeholder=" "
+      (keyup)="writeValue($event)"
+      [(ngModel)]="valeur"
+      (ngModelChange)="onChange($event)"
+      [style.width.px]="longueur"
+      [disabled]="disabled"
+      readonly
+    />
+
+    <label [for]="id" [style.width.px]="longueur"
+      ><span class="placeHolderText">{{ placeholder }}</span></label
+    >
+  </div>
+</div>

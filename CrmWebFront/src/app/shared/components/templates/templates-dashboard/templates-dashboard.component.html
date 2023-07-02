@@ -1,0 +1,36 @@
+<div *ngIf="user$ | async as user">
+  <nz-result nzStatus="success" [nzTitle]="'Bonjour ' + user.firstName" nzSubTitle="Bienvenue sur votre CRM"> </nz-result>
+</div>
+<div>
+  <nz-table
+    nzShowSizeChanger
+    [nzData]="listOfContact"
+    [nzFrontPagination]="false"
+    [nzLoading]="loading"
+    [nzTotal]="total"
+    [nzPageSize]="pageSize"
+    [nzPageIndex]="pageIndex"
+    (nzQueryParams)="onQueryParamsChange($event)"
+  >
+    <thead>
+      <tr>
+        <th nzColumnKey="firstName" nzShowSort [nzSortFn]="true" [nzSortDirections]="sortDirections">Firstname</th>
+        <th nzColumnKey="lastName" nzShowSort [nzSortFn]="true" [nzSortDirections]="sortDirections">Lastname</th>
+        <th nzColumnKey="mail" nzShowSort [nzSortFn]="true" [nzSortDirections]="sortDirections">Email</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of listOfContact">
+        <td>{{ data.firstName }}</td>
+        <td>{{ data.lastName }}</td>
+        <td>{{ data.mail }}</td>
+        <td>
+          <a (click)="showModalContact(data)">
+            <span nz-icon nzType="search" nzTheme="outline" class="loupe"></span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

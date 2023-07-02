@@ -1,0 +1,129 @@
+<h1>{{ contact.firstName }} {{ contact.lastName }}</h1>
+
+<div style="text-align: center">
+  <form nz-form [formGroup]="contactForm">
+    <div>
+      <div nz-row nzJustify="center">
+        <div nz-col nzSpan="7">
+          <nz-form-item>
+            <nz-form-control>
+              <molecules-input
+                longueur="200"
+                placeholder="Nom"
+                formControlName="lastName"
+                id="nom"
+                (keyup)="valeurValide()"
+              ></molecules-input>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col nzSpan="7">
+          <nz-form-item>
+            <nz-form-control>
+              <molecules-input
+                longueur="200"
+                placeholder="Prénom"
+                formControlName="firstName"
+                id="prenom"
+                (keyup)="valeurValide()"
+              ></molecules-input>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+    </div>
+    <div nz-row nzJustify="center">
+      <div nz-row class="titre"><label>Adresse</label></div>
+      <div nz-col nzSpan="24">
+        <nz-form-item>
+          <nz-form-control>
+            <molecules-adresse formControlName="address" [adresseComplete]="adresseAutre" [lectureMode]="lectureMode"> </molecules-adresse>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="1" class="texteLibelleUnite"><label></label></div>
+      <!-- ==================================================Date acquisition -->
+    </div>
+    <div nz-row nzJustify="center">
+      <div nz-row class="titre"><label>Coordonnées</label></div>
+    </div>
+    <div nz-row nzJustify="center">
+      <div nz-col nzSpan="7">
+        <nz-form-item>
+          <nz-form-control>
+            <molecules-input
+              longueur="200"
+              placeholder="Mail"
+              formControlName="mail"
+              id="mail"
+              (keyup)="valeurValide()"
+              [readonly]="true"
+            ></molecules-input>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+
+    <div nz-row nzJustify="center">
+      <!-- ==================================================Zone geographique -->
+      <div nz-col nzSpan="7">
+        <nz-form-item>
+          <nz-form-control>
+            <molecules-input
+              longueur="200"
+              placeholder="Téléphone"
+              formControlName="phone"
+              id="phone"
+              (keyup)="valeurValide()"
+            ></molecules-input>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <!-- ==================================================Durée d'engagement -->
+      <div nz-col nzSpan="7">
+        <nz-form-item>
+          <nz-form-control>
+            <molecules-input
+              longueur="200"
+              placeholder="Mobile"
+              formControlName="mobile"
+              id="mobile"
+              (keyup)="valeurValide()"
+            ></molecules-input>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row nzJustify="center">
+      <!-- ==================================================redynamisation -->
+      <div nz-col nzSpan="8" style="text-align: left">
+        <nz-form-item>
+          <nz-form-control>
+            <molecules-select
+              formControlName="idConseiller"
+              placeholder="Conseiller"
+              [data]="users$"
+              id="idConseiller"
+              longueur="200"
+              (ngModelChange)="valeurValide()"
+            ></molecules-select>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+  </form>
+  <br />
+  <div class="steps-action">
+    <div nz-row nzJustify="space-between">
+      <div nz-col>
+        <button nz-button nzType="primary" nzShape="round" (click)="destroyModal()">
+          <i nz-icon nzType="close" nzTheme="outline"></i>Annuler
+        </button>
+      </div>
+      <div nz-col>
+        <button nz-button nzType="primary" nzShape="round" (click)="save()"><i nz-icon nzType="arrow-left"></i>Valider</button>
+      </div>
+    </div>
+  </div>
+</div>
+

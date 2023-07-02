@@ -1,0 +1,59 @@
+<form nz-form [formGroup]="adresseForm">
+  <div nz-row nzJustify="center">
+    <div nz-col nzSpan="7">
+      <nz-form-item>
+        <nz-form-control>
+          <molecules-input longueur="200" placeholder="Rue" (change)="onChange()" formControlName="street" id="street"></molecules-input>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col nzSpan="7">
+      <nz-form-item>
+        <nz-form-control>
+          <!-- <input nz-input (change)="onChange()" placeholder="Complément" formControlName="streetComplement" /> -->
+          <molecules-input
+            longueur="200"
+            placeholder="Complément"
+            (change)="onChange()"
+            formControlName="streetComplement"
+            id="streetComplement"
+          ></molecules-input>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row nzJustify="center">
+    <div nz-col nzSpan="7">
+      <nz-form-item>
+        <nz-form-control nzErrorTip="La ville est obligatoire">
+          <molecules-input
+            longueur="200"
+            [autoComplete]="auto"
+            placeholder="Ville"
+            (input)="onSearch($event)"
+            (ngModelChange)="selectOption($event)"
+            formControlName="ville"
+            id="ville"
+          ></molecules-input>
+          <nz-autocomplete #auto>
+            <nz-auto-option *ngFor="let option of villeItems" [nzValue]="option.key">{{ option.value }}</nz-auto-option>
+          </nz-autocomplete>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col nzSpan="7">
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Le code postal est obligatoire">
+          <molecules-input
+            longueur="200"
+            [autoComplete]="auto"
+            placeholder="Code postal"
+            formControlName="codePostal"
+            id="codePostal"
+            [readonly]="true"
+          ></molecules-input>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>

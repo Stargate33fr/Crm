@@ -1,0 +1,128 @@
+<div style="text-align: center">
+  <form nz-form [formGroup]="userProfilForm">
+    <div>
+      <div nz-row nzJustify="center">
+        <div nz-col nzSpan="7">
+          <nz-form-item>
+            <nz-form-control>
+              <molecules-select
+                formControlName="civilite"
+                placeholder="Civilite"
+                [data]="civilities$"
+                id="civilite"
+                longueur="200"
+                (ngModelChange)="valeurValide()"
+              ></molecules-select>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+      <div nz-row nzJustify="center">
+        <div nz-col nzSpan="7">
+          <nz-form-item>
+            <nz-form-control>
+              <molecules-input
+                longueur="200"
+                placeholder="Nom"
+                formControlName="lastName"
+                id="nom"
+                (keyup)="valeurValide()"
+              ></molecules-input>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col nzSpan="7">
+          <nz-form-item>
+            <nz-form-control>
+              <molecules-input
+                longueur="200"
+                placeholder="Prénom"
+                formControlName="firstName"
+                id="prenom"
+                (keyup)="valeurValide()"
+              ></molecules-input>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+    </div>
+    <div nz-row nzJustify="center">
+      <div nz-row class="titre"><label>Adresse</label></div>
+      <div nz-col nzSpan="24">
+        <nz-form-item>
+          <nz-form-control>
+            <molecules-adresse formControlName="adresse" [adresseComplete]="adresseAutre" [lectureMode]="lectureMode"> </molecules-adresse>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="1" class="texteLibelleUnite"><label></label></div>
+    </div>
+    <div nz-row nzJustify="center">
+      <div nz-row class="titre"><label>Mes coordonnées</label></div>
+    </div>
+    <div nz-row nzJustify="center">
+      <div nz-col nzSpan="7">
+        <nz-form-item>
+          <nz-form-control>
+            <molecules-input longueur="200" placeholder="Mail" formControlName="mail" id="mail" (keyup)="valeurValide()"></molecules-input>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+
+    <div nz-row nzJustify="center">
+      <div nz-col nzSpan="7">
+        <nz-form-item>
+          <nz-form-control>
+            <molecules-input
+              longueur="200"
+              placeholder="Téléphone"
+              formControlName="phone"
+              id="phone"
+              (keyup)="valeurValide()"
+            ></molecules-input>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="7">
+        <nz-form-item>
+          <nz-form-control>
+            <molecules-input
+              longueur="200"
+              placeholder="Mobile"
+              formControlName="mobile"
+              id="mobile"
+              (keyup)="valeurValide()"
+            ></molecules-input>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row>
+      <div nz-col nzSpan="8" style="text-align: left">
+        <a
+          nz-popconfirm
+          nzPopconfirmTitle="Rénitiatliation du mot de passe"
+          nzPopconfirmPlacement="top"
+          (nzOnConfirm)="changePassword()"
+          (nzOnCancel)="cancel()"
+          >Changement du mot de passe</a
+        >
+      </div>
+    </div>
+  </form>
+  <br />
+  <!-- <div nz-row nzJustify="center">
+    <div class="loading" *ngIf="loading">
+      <nz-spin nzSimple></nz-spin>
+    </div>
+    <div ApprocheEpargne [fiscaliteType]="fiscaliteType" (approcheResult)="handleApprocheResult($event)"></div>
+    <ng-container #componentContainer></ng-container>
+  </div>
+  <div nz-row *ngIf="resultatVisible">
+    <div nz-col nzSpan="24" style="text-align: center; padding-top: 5px">
+      <button type="button" class="button-styled-green button-styled" (click)="reinit()">Proposer un nouveau calcul</button>
+    </div>
+  </div> -->
+</div>
+

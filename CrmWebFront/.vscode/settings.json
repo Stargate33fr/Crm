@@ -1,0 +1,6 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "editor.formatOnSave": true,
+  "angular.enable-strict-mode-prompt": false,
+  "files.eol": "\r\n"
+}

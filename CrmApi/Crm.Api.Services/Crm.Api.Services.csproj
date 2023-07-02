@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Crm.Api.Domain\Crm.Api.Domain.csproj" />
+    <ProjectReference Include="..\Crm.Api.Infrastructure\Crm.Api.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
