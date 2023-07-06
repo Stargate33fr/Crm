@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormatTelPipe } from '@core/pipes/formatTel.pipe';
 import { getCivilite } from '@core/store/selectors/referenceData.selector';
@@ -15,6 +15,7 @@ import { Subject, takeUntil } from 'rxjs';
   selector: 'organismes-user-profil',
   templateUrl: './organismes-user-profil.component.html',
   styleUrls: ['./organismes-user-profil.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OrganismesUserProfilComponent implements OnInit, OnDestroy {
   userProfilForm: FormGroup;

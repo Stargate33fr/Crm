@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j/9cXbtgjCJMmreVHNVKlCQFZ05LvCSI1REDVyiRc9Y3koFohY3C+G7X2ay9ApEvZ3QLAFbuYfcq3aDiu0Ol+Q==",
+  "dgSpecHash": "414YcaRuxc4RmUfKfDAGkC6JJOwSmYxJAgXPEBnHuG3uIX4IGuat/KzEf+eGtAJjT81BeSlm/c/yg3Izu6KxPw==",
   "success": true,
-  "projectFilePath": "F:\\DEV\\CrmApi\\Crm.Api\\Crm.Api.csproj",
+  "projectFilePath": "F:\\DEV\\Crm\\CrmApi\\Crm.Api\\Crm.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fdepret\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\fdepret\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

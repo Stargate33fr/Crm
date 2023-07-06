@@ -34,3 +34,15 @@ F:\DEV\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\Crm.Api.Domain.dll
 F:\DEV\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\refint\Crm.Api.Domain.dll
 F:\DEV\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\Crm.Api.Domain.pdb
 F:\DEV\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\ref\Crm.Api.Domain.dll
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\bin\Debug\net7.0\Crm.Api.Domain.deps.json
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\bin\Debug\net7.0\Crm.Api.Domain.dll
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\bin\Debug\net7.0\Crm.Api.Domain.pdb
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\Crm.Api.Domain.csproj.AssemblyReference.cache
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\Crm.Api.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\Crm.Api.Domain.AssemblyInfoInputs.cache
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\Crm.Api.Domain.AssemblyInfo.cs
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\Crm.Api.Domain.csproj.CoreCompileInputs.cache
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\Crm.Api.Domain.dll
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\refint\Crm.Api.Domain.dll
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\Crm.Api.Domain.pdb
+F:\DEV\Crm\CrmApi\Crm.Api.Domain\obj\Debug\net7.0\ref\Crm.Api.Domain.dll

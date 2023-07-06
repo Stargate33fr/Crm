@@ -6,7 +6,7 @@ namespace Crm.Api.Infrastructure.Entities
     {
         public int Id { get; set; }
 
-        public int? DepartementId { get; set; }
+        public int? DepartmentId { get; set; }
 
         [Required]
         [StringLength(255)]

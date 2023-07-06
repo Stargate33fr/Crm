@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormatTelPipe } from '@core/pipes/formatTel.pipe';
 import { ContactService } from '@core/services/contact.service';
@@ -15,6 +15,7 @@ import { Observable, Subject, takeUntil } from 'rxjs';
   selector: 'app-organismes-modal-contact',
   templateUrl: './organismes-modal-contact.component.html',
   styleUrls: ['./organismes-modal-contact.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OrganismesModalContactComponent implements OnInit, OnDestroy {
   @ViewChild('inputElementPortable') inputElementPortable: ElementRef;
@@ -31,7 +32,6 @@ export class OrganismesModalContactComponent implements OnInit, OnDestroy {
   destroy$ = new Subject<void>();
   constructor(
     private contactService: ContactService,
-
     private modal: NzModalRef,
     private fb: FormBuilder,
     private store: Store<IAppState>,

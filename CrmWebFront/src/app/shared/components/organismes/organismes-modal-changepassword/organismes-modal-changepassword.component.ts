@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ChangePassword, Logout } from '@core/store/actions/auth.action';
 import { getUser } from '@core/store/selectors/utilisateur.selector';
@@ -14,6 +14,7 @@ import { map, takeUntil } from 'rxjs/operators';
   selector: 'organismes-modal-changepassword',
   templateUrl: './organismes-modal-changepassword.component.html',
   styleUrls: ['./organismes-modal-changepassword.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OrganismesModalChangepasswordComponent implements OnInit, OnDestroy {
   reinitPasswordForm: FormGroup;

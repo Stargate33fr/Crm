@@ -6013,11 +6013,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\DEV\\CrmApi\\Crm.Api.Services\\Crm.Api.Services.csproj",
+      "projectUniqueName": "F:\\DEV\\Crm\\CrmApi\\Crm.Api.Services\\Crm.Api.Services.csproj",
       "projectName": "Crm.Api.Services",
-      "projectPath": "F:\\DEV\\CrmApi\\Crm.Api.Services\\Crm.Api.Services.csproj",
+      "projectPath": "F:\\DEV\\Crm\\CrmApi\\Crm.Api.Services\\Crm.Api.Services.csproj",
       "packagesPath": "C:\\Users\\fdepret\\.nuget\\packages\\",
-      "outputPath": "F:\\DEV\\CrmApi\\Crm.Api.Services\\obj\\",
+      "outputPath": "F:\\DEV\\Crm\\CrmApi\\Crm.Api.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6039,11 +6039,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "F:\\DEV\\CrmApi\\Crm.Api.Domain\\Crm.Api.Domain.csproj": {
-              "projectPath": "F:\\DEV\\CrmApi\\Crm.Api.Domain\\Crm.Api.Domain.csproj"
+            "F:\\DEV\\Crm\\CrmApi\\Crm.Api.Domain\\Crm.Api.Domain.csproj": {
+              "projectPath": "F:\\DEV\\Crm\\CrmApi\\Crm.Api.Domain\\Crm.Api.Domain.csproj"
             },
-            "F:\\DEV\\CrmApi\\Crm.Api.Infrastructure\\Crm.Api.Infrastructure.csproj": {
-              "projectPath": "F:\\DEV\\CrmApi\\Crm.Api.Infrastructure\\Crm.Api.Infrastructure.csproj"
+            "F:\\DEV\\Crm\\CrmApi\\Crm.Api.Infrastructure\\Crm.Api.Infrastructure.csproj": {
+              "projectPath": "F:\\DEV\\Crm\\CrmApi\\Crm.Api.Infrastructure\\Crm.Api.Infrastructure.csproj"
             }
           }
         }

@@ -106,7 +106,11 @@ export class UserLight implements IUserLight {
   }
 
   deserializeList(input: IUserLight[]): UserLight[] {
-    return input.map((x) => this.deserialize(x));
+    if (input && input.length > 0) {
+      return input.map((x) => this.deserialize(x));
+    } else {
+      return null as any;
+    }
   }
 
   serialize(): IUserLight {

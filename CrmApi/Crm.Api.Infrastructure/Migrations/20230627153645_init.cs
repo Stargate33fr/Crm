@@ -355,8 +355,6 @@ namespace Crm.Api.Infrastructure.Migrations
                 });
 
 
-
-
             migrationBuilder.CreateIndex(
                 name: "IX_Address_CityId",
                 table: "Address",

@@ -1,5 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RoutingKeys } from '@core/rounting/routing-keys';
+import { GetUsersLight } from '@core/store/actions/user.action';
+import { IAppState } from '@core/store/state/app.state';
+import { Store } from '@ngrx/store';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +14,11 @@ import { RoutingKeys } from '@core/rounting/routing-keys';
 export class AppComponent implements OnInit {
   public routingKey = RoutingKeys;
   title = 'TopInvestV6';
+  private destroy$ = new Subject<void>();
 
-  constructor() {}
+  constructor(private store: Store<IAppState>) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.store.dispatch(new GetUsersLight('allUsers'));
+  }
 }

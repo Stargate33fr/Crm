@@ -40,3 +40,17 @@ F:\DEV\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\refint\Crm.Api.Infrastruct
 F:\DEV\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\Crm.Api.Infrastructure.pdb
 F:\DEV\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\Crm.Api.Infrastructure.genruntimeconfig.cache
 F:\DEV\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\ref\Crm.Api.Infrastructure.dll
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\bin\Debug\net7.0\Crm.Api.Infrastructure.deps.json
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\bin\Debug\net7.0\Crm.Api.Infrastructure.runtimeconfig.json
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\bin\Debug\net7.0\Crm.Api.Infrastructure.dll
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\bin\Debug\net7.0\Crm.Api.Infrastructure.pdb
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\Crm.Api.Infrastructure.csproj.AssemblyReference.cache
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\Crm.Api.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\Crm.Api.Infrastructure.AssemblyInfoInputs.cache
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\Crm.Api.Infrastructure.AssemblyInfo.cs
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\Crm.Api.Infrastructure.csproj.CoreCompileInputs.cache
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\Crm.Api.Infrastructure.dll
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\refint\Crm.Api.Infrastructure.dll
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\Crm.Api.Infrastructure.pdb
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\Crm.Api.Infrastructure.genruntimeconfig.cache
+F:\DEV\Crm\CrmApi\Crm.Api.Infrastructure\obj\Debug\net7.0\ref\Crm.Api.Infrastructure.dll

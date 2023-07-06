@@ -14,6 +14,11 @@ export function userReducer(state = initialUserState, action: UserActions): IUse
         ...state,
         user: action.payload.serialize(),
       };
+    case UserActionTypes.setUsersLight:
+      return {
+        ...state,
+        usersLight: action.payload,
+      };
     case UserActionTypes.userSuccess:
       return {
         ...state,

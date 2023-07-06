@@ -87,34 +87,53 @@ namespace Crm.Api.Services.Implementation
 
         public async Task<List<ContactEntity>?> GetContacts(string? mail, string? firstName, string? lastName, int? conseillerId, Pagination pagination, Tri tri, CancellationToken cancellationToken)
         {
-            if (_context != null && _context.Contact != null 
-                && (!string.IsNullOrEmpty(mail) || !string.IsNullOrEmpty(firstName) || !string.IsNullOrEmpty(lastName) || conseillerId !=null))
+            if (_context != null && _context.Contact != null)
             {
-
-                string ascdesc = tri.Ascendant ? "ASC" : "DESC";
-                var triage = $"{tri.Champ} {ascdesc}";
-                return await _context.Contact
-                    .Include(v => v.Address)
-                     .ThenInclude(v => v.City)
-                        .ThenInclude(v => v.Department)
-                        .ThenInclude(v => v.Region)
-                        .ThenInclude(v => v.Country)
-                    .Include(v => v.Conseiller)
-                    .Where(u => (string.IsNullOrEmpty(mail) || u.Mail == mail)
-                                                        && (string.IsNullOrEmpty(firstName) || u.FirstName == firstName)
-                                                        && (string.IsNullOrEmpty(lastName) || u.LastName == lastName)
-                                                        && (conseillerId == null || u.ConseillerId == conseillerId))
-                                                        .OrderBy(triage)
-                                                        .Skip(pagination.Skip)
-                                                        .Take(pagination.Limite).ToListAsync();
+                if (!string.IsNullOrEmpty(mail) || !string.IsNullOrEmpty(firstName) || !string.IsNullOrEmpty(lastName) || conseillerId != null)
+                {
+                    string ascdesc = tri.Ascendant ? "ASC" : "DESC";
+                    var triage = $"{tri.Champ} {ascdesc}";
+                    return await _context.Contact
+                        .Include(v => v.Address)
+                         .ThenInclude(v => v.City)
+                            .ThenInclude(v => v.Department)
+                            .ThenInclude(v => v.Region)
+                            .ThenInclude(v => v.Country)
+                        .Include(v => v.Conseiller)
+                        .Where(u => (string.IsNullOrEmpty(mail) || u.Mail == mail)
+                                                            && (string.IsNullOrEmpty(firstName) || u.FirstName == firstName)
+                                                            && (string.IsNullOrEmpty(lastName) || u.LastName == lastName)
+                                                            && (conseillerId == null || u.ConseillerId == conseillerId))
+                                                            .OrderBy(triage)
+                                                            .Skip(pagination.Skip)
+                                                            .Take(pagination.Limite).ToListAsync();
+                }
+                else
+                {
+                    if (tri != null)
+                    {
+                        string ascdesc = tri.Ascendant ? "ASC" : "DESC";
+                        var triage = $"{tri.Champ} {ascdesc}";
+                        return await _context.Contact
+                            .Include(v => v.Address)
+                             .ThenInclude(v => v.City)
+                                .ThenInclude(v => v.Department)
+                                .ThenInclude(v => v.Region)
+                                .ThenInclude(v => v.Country)
+                            .Include(v => v.Conseiller)
+                           .OrderBy(triage)
+                            .Skip(pagination.Skip)
+                            .Take(pagination.Limite).ToListAsync();
+                    }
+                }
             }
             return null;
         }
 
         public async Task<int> GetContactsNumber(string? mail, string? firstName, string? lastName, int? conseillerId, CancellationToken cancellationToken)
         {
-            if (_context != null && _context.Contact != null
-                && (!string.IsNullOrEmpty(mail) || !string.IsNullOrEmpty(firstName) || !string.IsNullOrEmpty(lastName) || conseillerId != null))
+            if (_context != null && _context.Contact != null)
+                if (!string.IsNullOrEmpty(mail) || !string.IsNullOrEmpty(firstName) || !string.IsNullOrEmpty(lastName) || conseillerId != null)
             {
                var contacts =  await _context.Contact
                     .Include(v => v.Address)
@@ -128,8 +147,21 @@ namespace Crm.Api.Services.Implementation
                                                         && (string.IsNullOrEmpty(lastName) || u.LastName == lastName)
                                                         && (conseillerId == null || u.ConseillerId == conseillerId)).ToListAsync();
 
-                return contacts.Count;                                       
-            }
+                    return contacts.Count;
+                }
+                else
+                {
+                    var contacts = await _context.Contact
+                   .Include(v => v.Address)
+                    .ThenInclude(v => v.City)
+                       .ThenInclude(v => v.Department)
+                       .ThenInclude(v => v.Region)
+                       .ThenInclude(v => v.Country)
+                   .Include(v => v.Conseiller)
+                   .ToListAsync();
+
+                    return contacts.Count;
+                }
             return 0;
         }
 

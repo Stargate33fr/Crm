@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MduZzDdO6/qazrZMi0q+DwXYjc9CF+ENSWVKlPGwwxrMRxLpXtCrNEpu0CJ87sQv3H5UT9xlT4tIkWRm8+ZhEw==",
+  "dgSpecHash": "beEgmZnNlIyuUzHZCSAJ17qqdL6vsFh75gPlUOVQqblL7ZuR+XIceSdLXuqZzcvgSe9mijnqgVb+fchSZ11Trg==",
   "success": true,
-  "projectFilePath": "F:\\DEV\\CrmApi\\Crm.Api.Services.Implemtation\\Crm.Api.Services.Implementation.csproj",
+  "projectFilePath": "F:\\DEV\\Crm\\CrmApi\\Crm.Api.Services.Implemtation\\Crm.Api.Services.Implementation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fdepret\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\fdepret\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
